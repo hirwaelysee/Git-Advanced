@@ -58,7 +58,6 @@ click commit button and changes will be saved.
 
 <img src='./images/edit.png'>
 
-
 `$ git reset HEAD~` (this command resets the latest commit to the staging area).
 Then now you can add and commit each one individually.
 
@@ -394,7 +393,7 @@ To stash your changes
 `git add test1.md && git commit -m "feat: add changes in test1 file"`: add and commit the changes
 `git checkout ft/merge-conflict`: merge the changes and a conflict will occur
 
-<img src="./images/conflict.png">
+<img src="../images/conflict.png">
 
 - Solve the conflict manually and a commit will be made indicating the merge of the two branches.
 
