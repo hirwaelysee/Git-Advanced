@@ -7,7 +7,7 @@ $ git commit --amend -m "create third file"
 $ git add test4.md && git commit -m "chore: create fourth file"
 ```
 ### 2.Editing Commit History
-<img src="../images/log_before.png">
+<img src="./images/log_before.png">
 
 ```
 $ git rebase -i fb26feb (git rebase -i <commit before the one you want to amend>)
@@ -27,50 +27,50 @@ $ git rebase -i fb26feb (git rebase -i <commit before the one you want to amend>
 
 ```
 
-<img src="../images/img1.png">
+<img src="./images/img1.png">
 
 if you click the start rebase button above the rebase starts and a commit edit will open allowing you to modify the commit message and click the commit button. The commit message will be rewritten and saved.
 
-<img src="../images/img2.png">
-<img src="../images/img3.png">
+<img src="./images/img2.png">
+<img src="./images/img3.png">
 
 ### 3. Squashing Commits.
 
-<img src="../images/squash.png">
+<img src="./images/squash.png">
 
 ```bash
 $ git rebase -i fb26feb
 ```
-<img src="../images/squasg2.png">
+<img src="./images/squasg2.png">
 
 
 click start rebasing button
 
-<img src="../images/squash3.png">
+<img src="./images/squash3.png">
 
 
 click commit button and changes will be saved.
 
-<img src="../images/squash4.png">
+<img src="./images/squash4.png">
 
 ### 4. Splitting a Commit
 #### 4.1 Splitting the latest commit
 
-<img src='../images/edit.png'>
+<img src='./images/edit.png'>
 
 
 `$ git reset HEAD~` (this command resets the latest commit to the staging area).
 Then now you can add and commit each one individually.
 
-<img src='../images/edit2.png'>
+<img src='./images/edit2.png'>
 
 #### 4.2 Splitting a further commit
-<img src='../images/edit2.png'>
+<img src='./images/edit2.png'>
 
 
 `git rebase -i e4744a0` (select the commit before the one you want to change)
 
-<img src="../images/edit3.png">
+<img src="./images/edit3.png">
 
 
 - Click start rebase button
@@ -79,22 +79,22 @@ Then now you can add and commit each one individually.
 
 - Stage each file separately and commit them separately.
 
-<img src="../images/edit4.png">
+<img src="./images/edit4.png">
 
 ### 5. Advanced Squashing
 
-<img src="../images/edit4.png">
+<img src="./images/edit4.png">
 
 ```
 git rebase -i 8436fc7
 ```
-<img src="../images/squa.png">
+<img src="./images/squa.png">
 
 ```
 click the start rebase button
 ```
 
-<img src="../images/renaming.png">
+<img src="./images/renaming.png">
 
 Then:
 
@@ -102,36 +102,36 @@ Then:
 - Click **Commit**.
 - Click **Continue Rebase** to finish the rebase.
 
-<img src="../images/changed.png">
+<img src="./images/changed.png">
 
 ### 6. Dropping a Commit
 
     - Created an unwanted.txt file
     - Staged it and Committed it.
    
-<img src="../images/new.png">
+<img src="./images/new.png">
 
 ```bash
 $ git rebase -i 2757c79
 ```
 
-<img src="../images/drop.png">
+<img src="./images/drop.png">
 
 click start rebase button and the commit will be dropped.    
 
-<img src="../images/changed.png">
+<img src="./images/changed.png">
 
 ### 7. Reordering Commits
 
  **Commit history before**
- <img src="../images/changed.png">
+ <img src="./images/changed.png">
 
  ```bash
  $git rebase -i 56dd3fe
  ```
  Then move the commits according to how you want them.
 
- <img src="../images/beloved.png">
+ <img src="./images/beloved.png">
 
 ### 8. Cherry-Picking Commits:
 
@@ -393,5 +393,9 @@ To stash your changes
 - Add some changes also in the test1.txt file
 `git add test1.md && git commit -m "feat: add changes in test1 file"`: add and commit the changes
 `git checkout ft/merge-conflict`: merge the changes and a conflict will occur
-<img src="../images/conflict.png">
+
+<img src="./images/conflict.png">
+
+- Solve the conflict manually and a commit will be made indicating the merge of the two branches.
+
 
